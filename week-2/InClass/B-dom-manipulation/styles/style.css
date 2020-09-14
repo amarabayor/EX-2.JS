@@ -66,6 +66,21 @@ body {
 .jumbotron {
 	border-radius: 0;
 }
+.jumbotron {
+	background-image: url(/week-2/InClass/B-dom-manipulation/images/header-bike.jpg);
+    background-position: center;
+    background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.img-fluid{
+	max-width: 30%;
+	height: auto;
+/* }
+  p{
+	background-color: blue;
+} */
+
 
 /* Headings */
 .heading-underline {

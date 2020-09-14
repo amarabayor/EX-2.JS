@@ -21,6 +21,23 @@ body {
 	padding-bottom: 2em;
 }
 
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+	width: calc( 100% - 41px);
+	
+	
+}
+.unorderlist{
+	justify-content: space-around;
+}
+li.book{
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+}
 .navbar-brand > img {
 	max-height: 40px;
 	width: auto;

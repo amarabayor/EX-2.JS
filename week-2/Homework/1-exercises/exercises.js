@@ -13,10 +13,25 @@
  *      .....
  * </div>
  */
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
-
+  
+arrayOfPeople.forEach(person => {
+    
+    var h1 = document.createElement('h1')
+    
+    h1.innerText = person.name
+    
+    var h2 = document.createElement('h2')
+    
+    h2.innerText = person.job
+    
+    content.appendChild(h1)
+    
+    content.appendChild(h2)
+  })
+};
 /**
  *
  * Create a list of shopping items. You should use an unordered list.
@@ -25,8 +40,23 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
-}
+  
+  let content = document.querySelector('#content')
+ 
+  let ul = document.createElement('ul')
+  ul.classList.add("unorderlist")
+  
+  shopping.forEach(itemName => {
+  
+    let li = document.createElement('li')
+    
+    li.innerText = itemName
+   
+    ul.appendChild(li)
+  })
+  
+  content.appendChild(ul)
+};
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -57,10 +87,42 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
-  //Write your code in here
-}
 
+function exerciseThree(books) {
+ 
+  let content = document.querySelector('#content')
+  
+  let ul = document.createElement('ul')
+  let counter= 1;
+  
+  books.forEach(book => {
+    let p = document.createElement('p')
+    let li = document.createElement('li')
+    li.classList.add("book")
+   p.innerText = book.title + ' - ' + book.author;
+    
+    let img = document.createElement('img')
+    
+    img.setAttribute("src", "images/img" + counter + ".jpeg");
+   
+    counter = counter +1;
+    
+    if (book.alreadyRead === true) {
+   
+      li.style.backgroundColor = 'green'
+    }  else if (book.alreadyRead === false){ 
+      li.style.backgroundColor = 'red'
+    }
+    
+    li.appendChild(p)
+    
+    li.appendChild(img);
+   
+    ul.appendChild(li)
+  })
+  
+  content.appendChild(ul)
+};
 //
 //
 //
