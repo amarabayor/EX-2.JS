@@ -31,6 +31,7 @@ TIP: Use the functions you created on tasks 1-3
 
 ================
 */
+// Task one
 var movies = [
   {
     title: "Color Out of Space",
@@ -58,10 +59,47 @@ var movies = [
   },
 ];
 
+
+var myMovies ={
+  title: "Godfather",
+  director: "Francis Ford Coppola",
+  type: "horror",
+  haveWatched: true,
+
+}
 // create showMovies function
+
+function showMovies(){
+  let container =document.getElementById("all-movies");
+ 
+  let counter =document.getElementById("movies-number");
+  
+  counter.innerText = movies.length;
+  
+  movies.forEach(movie=>{
+
+    let PageTitle = document.createElement("p")
+  
+    PageTitle.innerText = `Title: ${movie.title},Director: ${movie.director}`
+    container.appendChild(PageTitle)
+  })
+}
+showMovies()
 
 
 // create a new movie object for your favorite movie
+function addMyMovies(movie){
+movies.push(movie)
+  showMovies()
+  
+
+}
+
+addMyMovies(myMovies)
+
+
+//setTimeout(() => addMovies(myMovies[0]), 2000)
 
 
 // create addMovies function
+
